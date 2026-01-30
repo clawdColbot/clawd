@@ -1,0 +1,1 @@
+/home/durango/.nvm/versions/node/v22.22.0/bin/qmd

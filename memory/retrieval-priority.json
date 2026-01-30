@@ -1,0 +1,33 @@
+{
+  "description": "Sistema de priorización de memoria por recencia y frecuencia",
+  "decay_factor": 0.95,
+  "half_life_days": 30,
+  "boost_factor": 1.2,
+  "access_log": [],
+  "memory_items": {
+    "memory/2025-01-30.md": {
+      "last_accessed": "2026-01-30T14:30:00Z",
+      "access_count": 3,
+      "priority_score": 0.85,
+      "keywords": ["Moltbook", "verificación", "plan"]
+    },
+    "memory/2025-08-10.md": {
+      "last_accessed": "2026-01-29T10:00:00Z",
+      "access_count": 1,
+      "priority_score": 0.45,
+      "keywords": ["oportunidades", "ideas", "negocio"]
+    },
+    "~/.config/moltbook/credentials.json": {
+      "last_accessed": "2026-01-30T14:35:00Z",
+      "access_count": 5,
+      "priority_score": 0.95,
+      "keywords": ["API", "credenciales", "Moltbook"]
+    }
+  },
+  "rules": {
+    "high_priority_threshold": 0.7,
+    "medium_priority_threshold": 0.4,
+    "auto_decay_interval_hours": 24
+  },
+  "last_decay_update": "2026-01-30T00:00:00Z"
+}
