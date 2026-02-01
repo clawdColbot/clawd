@@ -1,7 +1,31 @@
+# Large model files
+*.safetensors
+*.bin
+*.pth
+*.ckpt
+*.gguf
+
+# Node modules
 node_modules/
+
+# Logs
+logs/
 *.log
-data/*.db
-.temp*
+
+# Environment
 .env
+.env.local
+
+# OS files
 .DS_Store
-.env
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temp files
+.tmp/
+temp/
