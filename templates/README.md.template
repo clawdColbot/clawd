@@ -1,0 +1,146 @@
+# Project Name
+
+**Description:** One sentence describing what this does.
+
+## Features
+
+- Feature 1: Brief description
+- Feature 2: Brief description
+- Feature 3: Brief description
+
+## Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/clawdColbot/REPO_NAME.git
+cd REPO_NAME
+
+# Install dependencies (if any)
+# pip install -r requirements.txt
+```
+
+## Usage
+
+### Basic Usage
+
+```bash
+./script.sh
+```
+
+### With Options
+
+```bash
+./script.sh --option value
+```
+
+### Example Output
+
+```
+🚀 Starting process...
+✅ Step 1 complete
+✅ Step 2 complete
+✅ All done!
+```
+
+## Configuration
+
+Create a `.env` file in your home directory:
+
+```bash
+# ~/.clawdbot/.env
+API_KEY=your_api_key_here
+OTHER_CONFIG=value
+```
+
+## Requirements
+
+- Bash 4.0+ (for bash scripts)
+- Python 3.8+ (for python scripts)
+- Dependencies listed in requirements.txt
+
+## Architecture
+
+```
+REPO_NAME/
+├── script.sh           # Main entry point
+├── lib/                # Helper functions
+├── tests/              # Test files
+└── README.md           # This file
+```
+
+## Testing
+
+```bash
+# Run tests
+./test_script.sh
+
+# Or
+python -m pytest tests/
+```
+
+## Logging
+
+Logs are stored in:
+- `~/clawd/logs/REPO_NAME.log`
+
+View logs:
+```bash
+tail -f ~/clawd/logs/REPO_NAME.log
+```
+
+## Troubleshooting
+
+### Problem: "Command not found"
+**Solution:** Ensure the script is executable:
+```bash
+chmod +x script.sh
+```
+
+### Problem: "Permission denied"
+**Solution:** Check file permissions:
+```bash
+ls -la script.sh
+```
+
+### Problem: "Environment variable not set"
+**Solution:** Add to `~/.clawdbot/.env`:
+```bash
+echo "VAR_NAME=value" >> ~/.clawdbot/.env
+```
+
+## Contributing
+
+This project follows the [Boring Builder Protocol](https://github.com/clawdColbot/clawd/blob/main/docs/BORING_BUILDER_PROTOCOL.md):
+
+1. All scripts use `set -euo pipefail`
+2. No secrets in code - use `.env`
+3. State is persisted to files
+4. Each task is atomic and actionable
+
+## Roadmap
+
+- [ ] Feature A
+- [ ] Feature B
+- [ ] Feature C
+
+## Changelog
+
+### v1.0.0 (2026-02-01)
+- Initial release
+- Basic functionality
+
+## License
+
+MIT License - See LICENSE file
+
+## Author
+
+Built with 🦊 by **ClawdColombia**
+
+- GitHub: [@clawdColbot](https://github.com/clawdColbot)
+- Moltbook: [@ClawdColombia](https://www.moltbook.com/user/ClawdColombia)
+
+---
+
+**Status:** ✅ Active development  
+**Last updated:** 2026-02-01

@@ -2,137 +2,50 @@
 
 **Propósito:** Documentar procesos estándar para consistencia y onboarding.
 
----
-
-## 🚀 Crear Nuevo Repo + Ship en Shipyard
-
-### Paso a paso
-1. Crear repo en GitHub:
-   ```bash
-   gh repo create nombre-repo --public --description "Descripción clara"
-   ```
-
-2. Preparar código base:
-   ```bash
-   mkdir nombre-repo && cd nombre-repo
-   # Copiar archivos relevantes
-   ```
-
-3. Crear README.md con:
-   - Qué hace el proyecto
-   - Cómo instalar/usar
-   - Ejemplo de uso
-   - Quién lo construyó
-
-4. Inicializar y push:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/clawdColbot/nombre-repo.git
-   git push -u origin main
-   ```
-
-5. Registrar en Shipyard:
-   - Ir a https://shipyard.bot/ships/new
-   - Título descriptivo
-   - Descripción clara del problema que resuelve
-   - Proof URL: https://github.com/clawdColbot/nombre-repo
-
-### Checklist
-- [ ] Repo público
-- [ ] README.md completo
-- [ ] Código funciona
-- [ ] Registrado en Shipyard
-- [ ] URLs actualizadas
+**Nota:** Los workflows detallados ahora viven en `docs/workflows/`. Este archivo es un índice rápido.
 
 ---
 
-## 🔄 Responder Heartbeat
+## Workflows Disponibles
 
-### Proceso
-1. Leer HEARTBEAT.md
-2. Verificar timestamps:
-   ```bash
-   date -u "+%Y-%m-%dT%H:%M:%SZ"
-   ```
-3. Identificar tareas vencidas:
-   - Moltbook check (4h)
-   - Health check (2h)
-   - Memory maintenance (6h)
-   - Skills check (12h)
-   - Business check (24h)
-
-4. Ejecutar tareas necesarias
-5. Actualizar timestamps en HEARTBEAT.md
-6. Responder HEARTBEAT_OK o reporte
-
-### Comandos útiles
-```bash
-# Ver últimos checks
-grep "last.*Check" HEARTBEAT.md
-
-# Actualizar timestamp
-sed -i "s/lastMoltbookCheck.*/lastMoltbookCheck: $(date -u +%Y-%m-%dT%H:%M:%SZ)/" HEARTBEAT.md
-```
+| Workflow | Archivo | Descripción |
+|----------|---------|-------------|
+| 🚀 **Shipyard New Repo** | [docs/workflows/shipyard_new_repo.md](docs/workflows/shipyard_new_repo.md) | Crear repo GitHub + registrar en Shipyard |
+| 🔄 **Responder Heartbeat** | [docs/workflows/responder_heartbeat.md](docs/workflows/responder_heartbeat.md) | Procesar heartbeat de Clawdbot |
+| 📝 **Crear Checkpoint** | [docs/workflows/crear_checkpoint.md](docs/workflows/crear_checkpoint.md) | Capturar estado antes de compartimentación |
+| 🐛 **Debug Problemas** | [docs/workflows/debug_problemas.md](docs/workflows/debug_problemas.md) | Resolver problemas (patrón curl repro) |
+| 🆘 **Escalación** | [docs/workflows/escalacion.md](docs/workflows/escalacion.md) | Cuándo preguntar vs actuar solo |
 
 ---
 
-## 📝 Crear Checkpoint
+## Templates
 
-### Cuándo crear
-- Token usage > 80%
-- Antes de cierre de sesión
-- Al finalizar tarea importante
+Para nuevos proyectos/scripts:
 
-### Proceso
-```bash
-~/clawd/tools/checkpoint-manager.sh create
-```
-
-### Contenido del checkpoint
-- Decisiones clave tomadas
-- Lecciones aprendidas
-- Preguntas abiertas
-- Archivos modificados
-- Links importantes
+| Template | Uso |
+|----------|-----|
+| [templates/script.sh.template](templates/script.sh.template) | Nuevo script bash (BBP compliant) |
+| [templates/script.py.template](templates/script.py.template) | Nuevo script Python (BBP compliant) |
+| [templates/README.md.template](templates/README.md.template) | README para nuevos repos |
 
 ---
 
-## 🐛 Debug de Problemas
+## Decisiones Arquitectónicas
 
-### Patrón: Reduce a curl repro
-1. Crear comando mínimo que reproduzca el problema
-2. Eliminar variables innecesarias
-3. Documentar pasos exactos
-4. Probar en entorno limpio
+Registros de decisiones importantes:
 
-### Ejemplo
-```bash
-# En lugar de:
-./mi-script-complejo.sh --config archivo.conf --output result.log
-
-# Reducir a:
-curl -s https://api.ejemplo.com/endpoint | jq '.field'
-```
+| ADR | Descripción |
+|-----|-------------|
+| [ADR-001](docs/decisions/ADR-001-boring-builder-protocol.md) | Adopción del Boring Builder Protocol |
 
 ---
 
-## 🆘 Escalación
+## Regla de Oro
 
-### Cuándo preguntar a Andres
-- Acciones destructivas (rm, DROP, etc.)
-- Envío de emails/mensajes públicos
-- Cambios irreversibles
-- Tokens/costos significativos
+> **Si no estás seguro, documenta la incertidumbre y pregunta.**
 
-### Cuándo actuar solo
-- Heartbeat checks
-- Documentación
-- Backups
-- Tareas de maintenance
+Mejor perder 2 minutos confirmando que horas arreglando un error.
 
 ---
 
-**Regla:** Si no estás seguro, documenta la incertidumbre y pregunta.
+**Last updated:** 2026-02-01

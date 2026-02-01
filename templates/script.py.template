@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+"""
+SCRIPT_NAME.py - BRIEF_DESCRIPTION
+
+Author: 🦊 ClawdColombia
+Created: DATE
+Version: 1.0
+
+Boring Builder Protocol Compliant
+"""
+
+import os
+import sys
+import json
+import logging
+from pathlib import Path
+from datetime import datetime
+from typing import Optional, Dict, Any
+
+# ============================================================================
+# CONFIGURATION
+# ============================================================================
+
+SCRIPT_DIR = Path(__file__).parent.resolve()
+CONFIG_FILE = Path.home() / ".clawdbot" / ".env"
+LOG_FILE = Path.home() / "clawd" / "logs" / "SCRIPT_NAME.log"
+
+# ============================================================================
+# LOGGING
+# ============================================================================
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(LOG_FILE),
+        logging.StreamHandler(sys.stdout)
+    ]
+)
+logger = logging.getLogger(__name__)
+
+# ============================================================================
+# UTILITIES
+# ============================================================================
+
+def load_env() -> Dict[str, str]:
+    """Load environment variables from .env file."""
+    env_vars = {}
+    if CONFIG_FILE.exists():
+        with open(CONFIG_FILE) as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, value = line.split('=', 1)
+                    env_vars[key] = value
+    return env_vars
+
+def get_env_var(name: str, default: Optional[str] = None) -> str:
+    """Get environment variable with fallback."""
+    env_vars = load_env()
+    value = os.environ.get(name) or env_vars.get(name, default)
+    if value is None:
+        raise ValueError(f"Required environment variable {name} not set")
+    return value
+
+def save_state(data: Dict[str, Any]) -> None:
+    """Save state to state.json."""
+    state_file = Path.home() / "clawd" / "memory" / "state.json"
+    state_file.parent.mkdir(parents=True, exist_ok=True)
+    
+    existing = {}
+    if state_file.exists():
+        with open(state_file) as f:
+            existing = json.load(f)
+    
+    existing.update(data)
+    
+    with open(state_file, 'w') as f:
+        json.dump(existing, f, indent=2)
+
+# ============================================================================
+# MAIN
+# ============================================================================
+
+def main() -> int:
+    """Main entry point."""
+    logger.info("Starting SCRIPT_NAME...")
+    
+    try:
+        # Load configuration
+        env = load_env()
+        
+        # Check required variables
+        # required_var = get_env_var("REQUIRED_VAR")
+        
+        # Main logic here
+        # TODO: Implement main functionality
+        
+        logger.info("SCRIPT_NAME completed successfully")
+        return 0
+        
+    except Exception as e:
+        logger.error(f"Error: {e}")
+        return 1
+
+if __name__ == "__main__":
+    sys.exit(main())
