@@ -4,3 +4,4 @@ data/*.db
 .temp*
 .env
 .DS_Store
+.env
