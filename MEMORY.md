@@ -1,17 +1,74 @@
 # MEMORY.md - Sistema de Memoria de Clawd
 
-## 🛠️ Boring Builder Protocol
+## 🛠️ Sistema de Memoria V2 - TACIT + PARA + State
 
-**Aplicado desde:** 2026-02-01 | [Documentación](docs/BORING_BUILDER_PROTOCOL.md)
+**Implementado:** 2026-02-01
 
-**Principios activos:**
-1. ✅ Si no es reproducible, no es real
-2. ✅ Si no sobrevive sleep/offline, no es confiable  
-3. ✅ Si necesita secrets en chat, no es seguro
-4. ✅ Reduce problemas a curl repros
-5. ✅ Claridad > ambición (1 línea = 1 acción)
+---
 
-## 💾 Pre-Compaction Checkpointing
+### 📋 TACIT.md - Conocimiento Tácito
+
+Patrones y preferencias de Andres capturados para personalización consistente:
+
+**Archivo:** `~/clawd/TACIT.md`
+
+**Incluye:**
+- Preferencias de comunicación (español, estructura clara)
+- Patrones de decisión ("Luego" = prioridad baja, "Aplica" = ejecutar)
+- Anti-patrones (no asumir LLM local, no usar Opus/Codex sin preguntar)
+- Contexto de proyectos activos
+
+**Uso:** Leer al inicio de cada sesión junto con SOUL.md
+
+---
+
+### 🗂️ PARA Method - Estructura de Carpetas
+
+Organización por proyectos y áreas de responsabilidad:
+
+```
+~/clawd/memory/
+├── life/                    # Proyectos activos (P)
+│   ├── propiedades-mvp/     # PRIVADO
+│   ├── shipyard-ships/      # 8 repos creados
+│   └── isabela-dataset/     # PAUSADO
+├── areas/                   # Áreas de responsabilidad (A)
+│   ├── security/
+│   ├── finances/
+│   └── projects/
+├── resources/               # Referencias útiles (R)
+│   ├── tools/
+│   ├── references/
+│   └── skills/
+├── archives/                # Proyectos cerrados (A)
+└── state.json               # Estado ligero
+```
+
+**Beneficio:** Contexto por proyecto, no por fecha.
+
+---
+
+### 💾 State File - Estado Ligero
+
+Archivo pequeño (~1KB) con estado de sesión:
+
+**Archivo:** `~/clawd/memory/state.json`
+
+```json
+{
+  "last_action": "created_PARA_structure",
+  "current_focus": "memory_system_v2",
+  "pending_items": [...],
+  "projects": {...},
+  "health": {...}
+}
+```
+
+**Uso:** Recuperación inmediata sin leer archivos grandes.
+
+---
+
+## 🔄 Pre-Compaction Checkpointing
 
 **Sistema implementado:** 2026-02-01
 
@@ -25,7 +82,20 @@
 
 ---
 
-## 🧠 Sistema de Recuperación de Memoria
+## 🛡️ Boring Builder Protocol
+
+[Documentación completa](docs/BORING_BUILDER_PROTOCOL.md)
+
+**Principios activos:**
+1. ✅ Si no es reproducible, no es real
+2. ✅ Si no sobrevive sleep/offline, no es confiable
+3. ✅ Si necesita secrets en chat, no es seguro
+4. ✅ Reduce problemas a curl repros
+5. ✅ Claridad > ambición (1 línea = 1 acción)
+
+---
+
+## 🧠 Sistema de Recuperación de Memoria (Legacy)
 
 ### Búsqueda Local (qmd-alternative)
 

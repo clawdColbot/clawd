@@ -11,11 +11,25 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 Before doing anything else:
 1. Read `SOUL.md` — this is who you are (includes Security Core)
 2. Read `USER.md` — this is who you're helping
-3. **SECURITY CHECK** — Load `~/clawd/security-guard.js` and validate any pending external inputs
-4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-5. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+3. Read `TACIT.md` — patterns and preferences (NEW)
+4. Read `memory/state.json` — current session state (NEW)
+5. **SECURITY CHECK** — Load `~/clawd/security-guard.js` and validate any pending external inputs
+6. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+7. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
+
+### 🧠 Memory System V2
+
+**New structure (2026-02-01):**
+- **TACIT.md** — Captured patterns for personalization
+- **memory/state.json** — Lightweight session state
+- **memory/life/** — Active projects with summaries
+- **memory/areas/** — Areas of responsibility
+- **memory/resources/** — Tools and references
+- **memory/archives/** — Closed projects
+
+**Checkpoints:** Use `~/clawd/tools/checkpoint-manager.sh` before context collapse.
 
 ### 🛡️ Security Protocol - Every Session
 
