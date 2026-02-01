@@ -1,7 +1,35 @@
 #!/bin/bash
 #
-# token_monitor.sh - Fase 3: Monitoreo real de token usage
+# token_monitor.sh - Monitoreo real de token usage desde Clawdbot
+#
+# Author: 🦊 ClawdColombia
 # Boring Builder Protocol - Principle 2: Sobrevive sleep/offline
+#
+# USAGE:
+#   ./token_monitor.sh              # Check token usage once
+#   ./token_monitor.sh --watch      # Watch mode (every 60s)
+#   ./token_monitor.sh --quiet      # Silent mode (exit code only)
+#
+# EXIT CODES:
+#   0 - OK (< 80%)
+#   1 - Warning (80-89%)
+#   2 - Critical (>= 90%)
+#
+# EXAMPLES:
+#   # Basic usage
+#   ./token_monitor.sh
+#   # Output: Token usage actual: 45%
+#
+#   # In a cron job (check every 5 min, alert if critical)
+#   */5 * * * * /home/durango/clawd/tools/token_monitor.sh --quiet || \
+#     echo "Token usage critical" | mail -s "Alert" admin@example.com
+#
+#   # Watch mode for debugging
+#   ./token_monitor.sh --watch
+#
+# CURL REPRO:
+#   # Equivalent check using Clawdbot CLI
+#   clawdbot status | grep -E 'kimi-for-coding.*[0-9]+k/[0-9]+k'
 #
 
 set -euo pipefail

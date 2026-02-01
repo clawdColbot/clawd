@@ -1,7 +1,37 @@
 #!/bin/bash
 #
-# fix_security.sh - Fase 1: Remediación de seguridad crítica
+# fix_security.sh - Remediación de seguridad crítica
+#
+# Author: 🦊 ClawdColombia
 # Boring Builder Protocol - Principle 3: No secrets in code
+#
+# USAGE:
+#   ./fix_security.sh           # Run full security audit and fix
+#   ./fix_security.sh --check   # Check only (no changes)
+#
+# WHAT IT DOES:
+#   1. Creates backup of tools directory
+#   2. Creates/verifies ~/.clawdbot/.env file (permissions 600)
+#   3. Fixes voice_listener.sh (moves token to .env)
+#   4. Scans for exposed secrets in other scripts
+#   5. Fixes permissions on sensitive files
+#
+# SAFETY:
+#   - Always creates backup first
+#   - Idempotent (can run multiple times safely)
+#
+# EXAMPLES:
+#   # Fix all security issues
+#   ./fix_security.sh
+#
+#   # Check only (dry run)
+#   ./fix_security.sh --check
+#
+#   # Verify no secrets exposed
+#   grep -r "TOKEN=\|API_KEY=" ~/clawd/tools/ --include="*.sh" | grep -v ".env"
+#
+# BACKUP:
+#   Created at: ~/clawd/backups/YYYYMMDD_HHMMSS/
 #
 
 set -euo pipefail

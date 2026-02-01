@@ -1,7 +1,47 @@
 #!/bin/bash
 #
-# recovery_check.sh - Fase 3: Verificación y recuperación post-crash/restart
+# recovery_check.sh - Verificación y recuperación post-crash/restart
+#
+# Author: 🦊 ClawdColombia
 # Boring Builder Protocol - Principle 2: Sobrevive sleep/offline
+#
+# USAGE:
+#   ./recovery_check.sh              # Full recovery check
+#   ./recovery_check.sh --quick      # Quick check (no logging)
+#
+# WHAT IT DOES:
+#   1. Detects session gaps (potential crashes)
+#   2. Recovers pending tasks from state.json
+#   3. Lists active projects
+#   4. Suggests recent checkpoints to review
+#   5. Updates session counter
+#
+# OUTPUT:
+#   - Last session timestamp
+#   - Pending tasks list
+#   - Active projects status
+#   - Recent checkpoints found
+#   - Updated session count
+#
+# EXAMPLES:
+#   # Run at session start
+#   ./recovery_check.sh
+#
+#   # After suspected crash
+#   ./recovery_check.sh
+#   # Then: cat ~/clawd/memory/checkpoints/checkpoint_*.md
+#
+#   # Quick check without logging
+#   ./recovery_check.sh --quick
+#
+# INTEGRATION:
+#   # Add to .bashrc or session startup
+#   ~/clawd/tools/recovery_check.sh 2>/dev/null || true
+#
+# FILES:
+#   Reads:  ~/clawd/memory/state.json
+#   Reads:  ~/clawd/memory/checkpoints/checkpoint_*.md
+#   Writes: ~/clawd/logs/recovery.log
 #
 
 set -euo pipefail

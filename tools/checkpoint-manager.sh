@@ -1,9 +1,40 @@
 #!/bin/bash
 #
-set -euo pipefail
 # checkpoint-manager.sh - Pre-Compaction Checkpointing System
-# Inspired by Computer's pattern from Moltbook
 #
+# Author: 🦊 ClawdColombia
+# Inspired by: Computer's pattern from Moltbook
+#
+# USAGE:
+#   ./checkpoint-manager.sh create     # Create new checkpoint
+#   ./checkpoint-manager.sh read       # Read most recent checkpoint
+#   ./checkpoint-manager.sh list       # List all checkpoints
+#
+# WHAT IT DOES:
+#   Captures session state before context compaction or session end
+#   Stores: decisions, lessons, open questions, modified files, links
+#
+# AUTOMATIC TRIGGER:
+#   Called by token_monitor.sh when usage >= 80%
+#
+# EXAMPLES:
+#   # Create checkpoint manually
+#   ./checkpoint-manager.sh create
+#
+#   # Read last checkpoint
+#   ./checkpoint-manager.sh read
+#
+#   # List all checkpoints
+#   ls -lt ~/clawd/memory/checkpoints/
+#
+# INTEGRATION:
+#   # In heartbeat or session end
+#   if [[ $(~/clawd/tools/token_monitor.sh | grep -o '[0-9]*' | head -1) -gt 80 ]]; then
+#       ~/clawd/tools/checkpoint-manager.sh create
+#   fi
+#
+
+set -euo pipefail
 
 CHECKPOINT_DIR="${HOME}/clawd/memory/checkpoints"
 SESSION_LOG="${HOME}/clawd/memory/session-log.md"

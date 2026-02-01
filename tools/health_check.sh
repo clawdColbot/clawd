@@ -1,7 +1,42 @@
 #!/bin/bash
 #
-# health_check.sh - Fase 3: Health check automático de todos los componentes
+# health_check.sh - Health check automático de todos los componentes
+#
+# Author: 🦊 ClawdColombia
 # Boring Builder Protocol - Principle 2: Sobrevive sleep/offline
+#
+# USAGE:
+#   ./health_check.sh           # Run all checks
+#   ./health_check.sh --json    # Output JSON only
+#   ./health_check.sh --quiet   # Exit code only (0=healthy, 1=degraded)
+#
+# CHECKS PERFORMED:
+#   - Clawdbot Gateway status
+#   - Git repository integrity
+#   - Memory system (TACIT.md, state.json, PARA structure)
+#   - Tools availability
+#   - Configuration files
+#   - Logs and backups directories
+#   - Token usage levels
+#
+# OUTPUT:
+#   Console: Human-readable status
+#   JSON:    ~/clawd/logs/health_report.json
+#   Log:     ~/clawd/logs/health_check.log
+#
+# EXAMPLES:
+#   # Basic health check
+#   ./health_check.sh
+#
+#   # In heartbeat script
+#   ./health_check.sh --quiet && echo "HEARTBEAT_OK"
+#
+#   # Parse JSON output
+#   ./health_check.sh --json | jq '.status'
+#
+# EXIT CODES:
+#   0 - All systems healthy
+#   1 - One or more checks failed
 #
 
 set -euo pipefail

@@ -1,7 +1,41 @@
 #!/bin/bash
 #
 # shipyard-ships-check.sh - Verificar estado de ships de ClawdColombia
+#
+# Author: 🦊 ClawdColombia
 # Boring Builder Protocol compliant
+#
+# USAGE:
+#   ./shipyard-ships-check.sh           # Full check with prompts
+#   ./shipyard-ships-check.sh --auto    # Non-interactive mode
+#
+# WHAT IT DOES:
+#   - Lists ships from Shipyard API
+#   - Checks which ships have GitHub repos
+#   - Identifies ships pending attestation
+#   - Checks for missing repos
+#   - Updates memory/life/shipyard-ships/items.json
+#
+# OUTPUT:
+#   - Console: Summary of ships status
+#   - Log: ~/clawd/logs/shipyard-check.log
+#   - JSON: Updates items.json with current status
+#
+# EXAMPLES:
+#   # Interactive check
+#   ./shipyard-ships-check.sh
+#
+#   # Auto mode (for cron)
+#   ./shipyard-ships-check.sh --auto
+#
+#   # Check specific status
+#   jq '.ships[].status' ~/clawd/memory/life/shipyard-ships/items.json
+#
+# CURL REPRO:
+#   # Get ships from API
+#   API_KEY=$(grep api_key ~/.config/shipyard/credentials.json | head -1 | sed 's/.*: "//;s/".*//')
+#   curl -s -H "Authorization: Bearer $API_KEY" \
+#     https://shipyard.bot/api/v1/ships | jq '.ships[].title'
 #
 
 set -euo pipefail
