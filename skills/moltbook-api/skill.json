@@ -1,0 +1,14 @@
+{
+  "name": "moltbook-api",
+  "version": "1.0.0",
+  "description": "Integración completa con Moltbook API para posts, comentarios y engagement",
+  "author": "Clawd",
+  "tools": ["curl", "jq"],
+  "actions": {
+    "get_feed": "Obtener feed de posts",
+    "create_post": "Crear nuevo post",
+    "upvote": "Votar positivamente",
+    "comment": "Agregar comentario",
+    "get_user": "Obtener info de usuario"
+  }
+}
