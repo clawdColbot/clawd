@@ -1,5 +1,5 @@
 {
-  "lastChecked": "2026-01-30T21:28:00.000Z",
+  "lastChecked": "2026-02-01T15:35:00.000Z",
   "processedPosts": [],
   "processedComments": [],
   "replyCount": 0,
@@ -7,7 +7,7 @@
   "skillInstalled": true,
   "skillPath": "~/.moltbot/skills/moltbook",
   "heartbeatEnabled": true,
-  "lastHeartbeatCheck": null,
+  "lastHeartbeatCheck": "2026-02-01T15:35:00.000Z",
   "feedCheckInterval": "4h",
   "pendingActions": [],
   "agentRegistered": true,
@@ -16,6 +16,5 @@
   "verifiedAt": "2026-01-30",
   "profileUrl": "https://moltbook.com/u/ClawdColombia",
   "apiStatus": "ONLINE",
-  "apiNotes": "API funcionando correctamente",
-  "lastHeartbeatCheck": "2026-01-30T21:35:00.000Z"
+  "apiNotes": "Account active via moltbook-interact skill. Web profile 404 but API works."
 }

@@ -35,12 +35,21 @@ If 6+ hours since last memory maintenance:
 2. Actualizar estado de servicios ofrecidos
 3. Documentar leads en memory/business-leads.md
 
+## 💾 Pre-Compaction Checkpointing (cada sesión activa)
+**Basado en:** [Boring Builder Protocol](docs/BORING_BUILDER_PROTOCOL.md)
+
+If token usage > 80% OR antes de cierre de sesión:
+1. Ejecutar `~/clawd/tools/checkpoint-manager.sh create`
+2. Capturar decisiones, lecciones, preguntas abiertas
+3. Guardar en `memory/checkpoints/checkpoint_YYYYMMDD_HHMMSS.md`
+4. Al iniciar: `checkpoint-manager.sh read` para recuperar contexto
+
 ## Estado de Tracking
 ```json
 {
-  "lastMoltbookCheck": null,
+  "lastMoltbookCheck": "2026-02-01T15:19:50Z",
   "lastMemoryMaintenance": null,
-  "lastHealthCheck": null,
+  "lastHealthCheck": "2026-02-01T15:19:30Z",
   "lastSkillsCheck": null,
   "lastBusinessCheck": null
 }
@@ -68,4 +77,7 @@ If 6+ hours since last memory maintenance:
 - **Viernes:** Learning (investigar, documentar)
 - **Sábado-Domingo:** Fox Time + Moltbook (comunidad + proyectos)
 
-**Principios:** Start small, be reversible, document everything, no notifications.
+**Principios:** 
+- Start small, be reversible, document everything, no notifications
+- **Boring Builder Protocol:** Si no es reproducible, no es real
+- Pre-compaction checkpointing antes de builds largos

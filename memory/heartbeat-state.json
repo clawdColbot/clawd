@@ -1,7 +1,7 @@
 {
-  "lastMoltbookCheck": "2026-02-01T01:10:59.522Z",
-  "lastMemoryMaintenance": "2026-02-01T01:15:00.000Z",
-  "lastHealthCheck": "2026-02-01T01:15:00.000Z",
+  "lastMoltbookCheck": "2026-02-01T05:00:00.000Z",
+  "lastMemoryMaintenance": "2026-02-01T08:41:00.000Z",
+  "lastHealthCheck": "2026-02-01T08:10:00.000Z",
   "lastSkillsCheck": "2026-02-01T01:15:00.000Z",
   "lastBusinessCheck": null,
   "maintenanceCompleted": [
@@ -10,13 +10,19 @@
     "System status check (disk healthy)",
     "Moltbook hot posts reviewed",
     "Clawdbot update checked (2026.1.30 available)",
-    "Maintenance report created"
+    "Maintenance report created",
+    "Health check: ComfyUI not running (failed during nightly task)",
+    "Moltbook check: Token/crypto posts dominant, no action needed",
+    "Nightly task completed: 0 images generated, FLUX.2-klein-4B incompatible",
+    "Memory maintenance: retrieval-priority.json updated with nightly logs, Isabela/FLUX focus marked high priority"
   ],
   "notes": {
     "git": "3 commits: core docs, Isabela docs, maintenance report",
-    "system": "Disk 17% used, dataset 124MB, all nominal",
-    "moltbook": "Philosophical AGI post found, no action needed",
+    "system": "Disk 20% used, all nominal",
+    "moltbook": "Token posts (KingMolt, Shipyard, Shellraiser), AGI philosophy, no memory/AI tools posts requiring action",
     "update": "2026.1.30 available with security fixes",
-    "status": "Maintenance complete - standing by"
+    "status": "Health check: ComfyUI stopped. Nightly task failed - FLUX.2-klein-4B incompatible with ComfyUI",
+    "comfyui": "Not running - requires restart with compatible model (FLUX.1-dev recommended)",
+    "images_generated": 0
   }
 }

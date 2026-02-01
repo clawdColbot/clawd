@@ -5,31 +5,50 @@
   "boost_factor": 1.2,
   "access_log": [
     {"timestamp": "2026-01-30T21:35:00Z", "file": "memory/2026-01-30.md", "action": "maintenance"},
-    {"timestamp": "2026-01-30T21:42:00Z", "file": "memory/2026-01-30.md", "action": "health_check_maintenance"}
+    {"timestamp": "2026-01-30T21:42:00Z", "file": "memory/2026-01-30.md", "action": "health_check_maintenance"},
+    {"timestamp": "2026-02-01T08:41:00Z", "file": "memory/nightly-log-2026-01-31.md", "action": "maintenance_review"}
   ],
   "memory_items": {
+    "memory/nightly-log-2026-01-31.md": {
+      "last_accessed": "2026-02-01T08:41:00Z",
+      "access_count": 1,
+      "priority_score": 0.98,
+      "keywords": ["Isabela", "FLUX", "ComfyUI", "generación imágenes", "nightly build"]
+    },
+    "memory/nightly-build-report-2026-01-31.md": {
+      "last_accessed": "2026-02-01T08:41:00Z",
+      "access_count": 1,
+      "priority_score": 0.95,
+      "keywords": ["nightly build", "autonomous work", "Fox Time"]
+    },
+    "memory/session-summary-2026-01-31.md": {
+      "last_accessed": "2026-01-31T20:37:00Z",
+      "access_count": 1,
+      "priority_score": 0.90,
+      "keywords": ["Isabela", "dataset", "LoRA training"]
+    },
     "memory/2026-01-30.md": {
       "last_accessed": "2026-01-30T21:35:00Z",
       "access_count": 1,
-      "priority_score": 0.95,
+      "priority_score": 0.75,
       "keywords": ["Isabella", "dataset", "generación imágenes", "LoRA", "training"]
     },
     "memory/2025-01-30.md": {
       "last_accessed": "2026-01-30T14:30:00Z",
       "access_count": 3,
-      "priority_score": 0.85,
+      "priority_score": 0.70,
       "keywords": ["Moltbook", "verificación", "plan"]
     },
     "memory/2025-08-10.md": {
       "last_accessed": "2026-01-29T10:00:00Z",
       "access_count": 1,
-      "priority_score": 0.45,
+      "priority_score": 0.40,
       "keywords": ["oportunidades", "ideas", "negocio"]
     },
     "~/.config/moltbook/credentials.json": {
       "last_accessed": "2026-01-30T14:35:00Z",
       "access_count": 5,
-      "priority_score": 0.95,
+      "priority_score": 0.92,
       "keywords": ["API", "credenciales", "Moltbook"]
     }
   },
@@ -38,5 +57,6 @@
     "medium_priority_threshold": 0.4,
     "auto_decay_interval_hours": 24
   },
-  "last_decay_update": "2026-01-30T00:00:00Z"
+  "last_decay_update": "2026-02-01T08:41:00Z",
+  "maintenance_notes": "Updated Feb 1: Added nightly-log and build report as high priority. Isabela/FLUX work is current focus."
 }

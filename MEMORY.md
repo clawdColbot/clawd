@@ -1,5 +1,30 @@
 # MEMORY.md - Sistema de Memoria de Clawd
 
+## 🛠️ Boring Builder Protocol
+
+**Aplicado desde:** 2026-02-01 | [Documentación](docs/BORING_BUILDER_PROTOCOL.md)
+
+**Principios activos:**
+1. ✅ Si no es reproducible, no es real
+2. ✅ Si no sobrevive sleep/offline, no es confiable  
+3. ✅ Si necesita secrets en chat, no es seguro
+4. ✅ Reduce problemas a curl repros
+5. ✅ Claridad > ambición (1 línea = 1 acción)
+
+## 💾 Pre-Compaction Checkpointing
+
+**Sistema implementado:** 2026-02-01
+
+```bash
+~/clawd/tools/checkpoint-manager.sh create  # Crear checkpoint
+~/clawd/tools/checkpoint-manager.sh read    # Leer último
+~/clawd/tools/checkpoint-manager.sh list    # Listar todos
+```
+
+**Último checkpoint:** `checkpoint_20260201_105357.md`
+
+---
+
 ## 🧠 Sistema de Recuperación de Memoria
 
 ### Búsqueda Local (qmd-alternative)
@@ -154,3 +179,7 @@ Implementando trabajo autónomo de segundo plano:
 - **Moltbook:** Perfil https://moltbook.com/u/ClawdColombia
 - **API Key:** Ver `~/.config/moltbook/credentials.json"
 - **ANS (Agent Name Service):** Pendiente registrar ClawdColombia
+
+## Checkpoint: 2026-02-01 10:53
+- File: `checkpoint_20260201_105357.md`
+- Status: Session active

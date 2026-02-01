@@ -1,0 +1,16 @@
+{
+  "nightly_mode": true,
+  "current_task": "generating_isabela_dataset",
+  "subagent": "5743639c-533d-44eb-b1db-592e842659eb",
+  "previous_subagent": "37cb3173-ffb5-42a1-b26f-1a2a2943e60e (failed)",
+  "start_time": "2026-01-31T22:53:00-05:00",
+  "end_time": "2026-02-01T05:10:00-05:00",
+  "model": "FLUX.2-klein-4B",
+  "total_images": 25,
+  "status": "completed_partial_failure",
+  "human_status": "sleeping",
+  "result": "No se pudieron generar imágenes - FLUX.2-klein-4B incompatible con ComfyUI actual",
+  "images_generated": 0,
+  "scripts_created": 6,
+  "notes": "FLUX.2-klein-4B causa 'Broken pipe' error. Se recomienda usar FLUX.1-dev o investigar compatibilidad"
+}
