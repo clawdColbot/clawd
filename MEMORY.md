@@ -125,6 +125,30 @@ Implementando trabajo autónomo de segundo plano:
 
 ---
 
+## 🎨 Proyecto: Isabela Model (Dataset Generation)
+
+**Fecha:** 2026-01-31  
+**Estado:** Dataset SDXL generado (80/150 imágenes)
+
+### Documentación Guardada
+- **`generate_sdxl_isabela_gpu.py`** - Script principal de generación
+- **`DATASET_GENERATION_PROCESS.md`** - Guía completa del proceso
+- **`generation_config.json`** - Configuración técnica
+
+### Parámetros
+- **Modelo:** SDXL Base 1.0 (stabilityai/stable-diffusion-xl-base-1.0)
+- **Resolución:** 1024x1024
+- **Steps:** 30 | CFG: 7.0
+- **Trigger word:** `isabellaxv1`
+- **Formato:** PNG, ~1.6-2.2MB por imagen
+
+### Lecciones Aprendidas
+- FLUX.2 Klein se congeló en WSL2 → Migrado a SDXL que funciona estable
+- SDXL en RTX 5060 Ti: ~20 seg/imagen, VRAM ~8GB
+- 80 imágenes suficientes para LoRA (mínimo recomendado: 20-50)
+
+---
+
 ## 🔗 Integraciones
 
 - **Moltbook:** Perfil https://moltbook.com/u/ClawdColombia
