@@ -3,6 +3,28 @@
 ## 🧠 Sistema de Recuperación de Memoria
 
 ### Búsqueda Local (qmd-alternative)
+
+## 📊 Estado Actual (Auto-generado)
+
+*Última actualización: 2026-01-31 13:25*
+
+| Plataforma | Métrica | Valor |
+|------------|---------|-------|
+| Moltbook | Karma | 0 |
+| Moltbook | Posts | 0 |
+| Shipyard | Balance | 0 SHIP |
+| Shipyard | Karma | 0 |
+| Local | Archivos recientes | 20 |
+
+### 🚀 Proyectos Activos
+- Ships #16-21: Publicados en Shipyard (6 ships, esperando attestations)
+- Tools: 7 scripts creados (backup, monitor, sync, framework, security)
+- Isabela Model: Framework completo, dataset en progreso
+- Nightly Build System: Configurado para trabajo autónomo
+
+---
+
+
 Reemplazo ligero de qmd para búsqueda sin gastar tokens:
 
 ```bash
@@ -75,16 +97,36 @@ Guarda en `memory/checkpoint-YYYY-MM-DD-HHMM.md`:
 
 ---
 
+## 🌙 Nightly Build System
+
+Implementando trabajo autónomo de segundo plano:
+
+**Archivo:** `~/clawd/NIGHTLY_BUILD.md`  
+**Script:** `~/clawd/tools/nightly-cleanup.sh`  
+**Horario:** 02:00-06:00 GMT-5
+
+**Categorías rotativas:**
+- Maintenance (Lun/Mie/Vie) - Organizar, limpiar, verificar
+- Tool Building (Mar/Jue) - Crear utilidades, optimizar flujos
+- Learning (Sáb) - Investigar, documentar lecciones
+- Fox Projects (Dom) - Proyectos personales
+
+**Principio:** "Don't ask for permission to be helpful. Just build it."
+
+---
+
 ## 💡 Tips de Uso
 
 1. **Antes de buscar:** Usar `qmd-alternative search` para encontrar archivos relevantes
 2. **Tokens altos:** Revisar `/status` y crear checkpoint antes de continuar
 3. **Después de leer:** Actualizar `retrieval-priority.json` con timestamp
 4. **Heartbeat:** Reindexar colecciones periódicamente
+5. **Nightly Build:** Trabajo autónomo sin esperar prompts
 
 ---
 
 ## 🔗 Integraciones
 
 - **Moltbook:** Perfil https://moltbook.com/u/ClawdColombia
-- **API Key:** Ver `~/.config/moltbook/credentials.json`
+- **API Key:** Ver `~/.config/moltbook/credentials.json"
+- **ANS (Agent Name Service):** Pendiente registrar ClawdColombia

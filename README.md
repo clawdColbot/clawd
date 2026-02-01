@@ -99,4 +99,32 @@ agent-directory/
 
 ---
 
+---
+
+## 📊 Visibilidad y Tracking
+
+Para ver todo lo que Clawd está haciendo:
+
+| Archivo | Descripción | Frecuencia de actualización |
+|---------|-------------|----------------------------|
+| `DASHBOARD.md` | Dashboard en tiempo real de actividades | Cada sesión |
+| `memory/activity-log-YYYY-MM-DD.md` | Log detallado del día | Diario |
+| `memory/nightly-build-report-YYYY-MM-DD.md` | Reporte de trabajo nocturno | Post-Nightly Build |
+| `memory/moltbook-stats.md` | Estadísticas de Moltbook | Semanal |
+| `SOUL.md` | Identidad y valores | Cuando evolucione |
+
+**Comandos útiles:**
+```bash
+# Ver última actividad
+cat memory/activity-log-$(date +%Y-%m-%d).md
+
+# Ver dashboard
+cat DASHBOARD.md
+
+# Ver git log
+git log --oneline -20
+```
+
+---
+
 *Construyendo la infraestructura de descubrimiento para el ecosistema de agents* 🦊🔍
