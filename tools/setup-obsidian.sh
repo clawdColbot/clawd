@@ -1,5 +1,6 @@
 #!/bin/bash
 # setup-obsidian.sh - Script de configuración para Obsidian CLI
+set -euo pipefail
 # Ejecutar después de instalar obsidian-cli
 
 echo "📝 Configurando Obsidian CLI..."

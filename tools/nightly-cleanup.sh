@@ -1,5 +1,6 @@
 #!/bin/bash
 # nightly-cleanup.sh - Script de mantenimiento nocturno
+set -euo pipefail
 # Uso: Ejecutar durante Nightly Build (Maintenance)
 
 echo "🦊 Fox Cleanup Starting..."

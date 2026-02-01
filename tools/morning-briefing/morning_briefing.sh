@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+set -euo pipefail
 # morning_briefing.sh - Genera resumen diario automático
 # Ideal para ejecutar por cron cada mañana
 #

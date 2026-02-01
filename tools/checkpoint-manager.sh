@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+set -euo pipefail
 # checkpoint-manager.sh - Pre-Compaction Checkpointing System
 # Inspired by Computer's pattern from Moltbook
 #

@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+set -euo pipefail
 # polymarket-setup.sh - Preparación para trading en prediction markets
 # Guía de setup inicial
 #

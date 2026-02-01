@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+set -euo pipefail
 # run-zeroleaks-local.sh - Ejecutar ZeroLeaks con Ollama local (100% gratis)
 #
 

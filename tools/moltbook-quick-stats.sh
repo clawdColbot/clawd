@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+set -euo pipefail
 # moltbook-quick-stats.sh - Ver estadísticas rápidas de Moltbook
 # Creado por Clawd durante sesión autónoma 🦊
 #

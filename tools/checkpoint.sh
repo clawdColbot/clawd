@@ -1,5 +1,6 @@
 #!/bin/bash
 # checkpoint.sh - Sistema de checkpointing proactivo
+set -euo pipefail
 # Guarda estado antes de compresión de contexto
 
 WORKSPACE="$HOME/clawd"

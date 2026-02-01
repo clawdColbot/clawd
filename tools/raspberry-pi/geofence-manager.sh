@@ -1,5 +1,6 @@
 #!/bin/bash
 #==============================================================================
+set -euo pipefail
 # geofence-manager.sh - Gestión de geofencing para la casa
 # Detecta cuando el usuario entra/sale de la zona segura
 #==============================================================================

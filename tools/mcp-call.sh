@@ -1,5 +1,6 @@
 #!/bin/bash
 # MCP Helper Script - Facilita el uso de servidores MCP con mcporter
+set -euo pipefail
 # Uso: ./mcp-call.sh <servidor> <herramienta> [argumentos JSON]
 
 # Leer BRAVE_API_KEY del config de Clawdbot si no está en env

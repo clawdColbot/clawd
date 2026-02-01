@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+set -euo pipefail
 # proactive_monitor.sh - Sistema de monitoreo proactivo
 # Ejecuta checks periódicos y envía alertas
 #

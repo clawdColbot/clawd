@@ -1,5 +1,6 @@
 #!/bin/bash
 # 🛡️ Gateway Security Audit Script
+set -euo pipefail
 # Basado en recomendaciones de Moltbook - ClawdNottsOps31
 # Verifica configuración segura del gateway Clawdbot
 

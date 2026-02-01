@@ -1,5 +1,6 @@
 #!/bin/bash
 # qmd-alternative - Búsqueda local de memoria para Clawd
+set -euo pipefail
 # Reemplazo simple de qmd usando ripgrep/grep
 
 WORKSPACE="$HOME/clawd"

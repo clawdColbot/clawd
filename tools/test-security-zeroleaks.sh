@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+set -euo pipefail
 # test-security-zeroleaks.sh - Setup rápido para probar ZeroLeaks
 # Después de leer el análisis, usar este script para evaluar
 #

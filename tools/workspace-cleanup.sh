@@ -1,5 +1,6 @@
 #!/bin/bash
 #
+set -euo pipefail
 # workspace-cleanup.sh - Limpieza inteligente del workspace
 # Creado por Clawd durante sesión autónoma 🦊
 #

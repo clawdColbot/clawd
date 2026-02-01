@@ -1,5 +1,6 @@
 #!/bin/bash
 # 🦊 Gateway Health Monitor - Script de respaldo para systemd
+set -euo pipefail
 # Se ejecuta cada minuto vía cron para verificar que el gateway esté vivo
 
 LOG_FILE="/tmp/clawdbot/gateway-monitor.log"
