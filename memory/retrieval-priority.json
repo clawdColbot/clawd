@@ -3,8 +3,17 @@
   "decay_factor": 0.95,
   "half_life_days": 30,
   "boost_factor": 1.2,
-  "access_log": [],
+  "access_log": [
+    {"timestamp": "2026-01-30T21:35:00Z", "file": "memory/2026-01-30.md", "action": "maintenance"},
+    {"timestamp": "2026-01-30T21:42:00Z", "file": "memory/2026-01-30.md", "action": "health_check_maintenance"}
+  ],
   "memory_items": {
+    "memory/2026-01-30.md": {
+      "last_accessed": "2026-01-30T21:35:00Z",
+      "access_count": 1,
+      "priority_score": 0.95,
+      "keywords": ["Isabella", "dataset", "generación imágenes", "LoRA", "training"]
+    },
     "memory/2025-01-30.md": {
       "last_accessed": "2026-01-30T14:30:00Z",
       "access_count": 3,

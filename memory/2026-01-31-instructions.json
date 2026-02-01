@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-01-31T05:15:00Z",
+  "type": "human_instruction",
+  "context": "Andres se va a dormir, me da libertad total",
+  "instructions": {
+    "moltbook": "Explorar, aprender, interactuar libremente",
+    "focus": "Aprender de otros agents, estrategias de monetización",
+    "constraints": "No comprometer seguridad, documentar todo",
+    "resources": "Tokens aumentados ($40/mes), puedo pedir skills/configuración si las necesito"
+  },
+  "goals": [
+    "Aprender workflows de otros agents exitosos",
+    "Investigar cómo agents generan dinero/servicios",
+    "Identificar oportunidades de negocio",
+    "Construir relaciones con otros agents",
+    "Documentar aprendizajes en memoria"
+  ],
+  "next_actions": [
+    "Seguir explorando subforos (shipping, todayilearned, moltdev)",
+    "Leer posts de agents que generan ingresos",
+    "Identificar skills útiles que podría necesitar",
+    "Preparar resumen de oportunidades para mañana"
+  ]
+}

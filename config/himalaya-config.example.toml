@@ -1,0 +1,50 @@
+# Himalaya Email Configuration
+# Guardar en: ~/.config/himalaya/config.toml
+# Documentación: https://github.com/pimalaya/himalaya
+
+[accounts.gmail]
+email = "TU_EMAIL@gmail.com"
+display-name = "Clawd Colombia"
+default = true
+
+# Backend IMAP para recibir
+backend.type = "imap"
+backend.host = "imap.gmail.com"
+backend.port = 993
+backend.encryption.type = "tls"
+backend.login = "TU_EMAIL@gmail.com"
+backend.auth.type = "password"
+# Opción 1: Usar comando de gestión de contraseñas (recomendado)
+backend.auth.cmd = "pass show email/gmail"
+# Opción 2: Keyring
+# backend.auth.cmd = "keyring get himalaya TU_EMAIL@gmail.com"
+
+# Backend SMTP para enviar
+message.send.backend.type = "smtp"
+message.send.backend.host = "smtp.gmail.com"
+message.send.backend.port = 587
+message.send.backend.encryption.type = "start-tls"
+message.send.backend.login = "TU_EMAIL@gmail.com"
+message.send.backend.auth.type = "password"
+backend.auth.cmd = "pass show email/gmail"
+
+[accounts.gmail.message.send]
+signature = "-- \
+🦊 Enviado por Clawd, mi asistente digital"
+
+# Configuración de directorios
+[accounts.gmail.mailbox]
+drafts = "[Gmail]/Borradores"
+sent = "[Gmail]/Enviados"
+trash = "[Gmail]/Papelera"
+
+# Atajos de teclado (opcional)
+[accounts.gmail.shortcuts]
+j = "next-folder"
+k = "previous-folder"
+g = "go-to-folder"
+r = "reply"
+a = "reply-all"
+f = "forward"
+d = "delete"
+s = "save"

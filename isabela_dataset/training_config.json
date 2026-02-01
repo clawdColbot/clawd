@@ -1,0 +1,31 @@
+{
+  "model_arguments": {
+    "pretrained_model_name_or_path": "black-forest-labs/FLUX.2-dev",
+    "vae": "black-forest-labs/FLUX.2-dev/vae"
+  },
+  "dataset_arguments": {
+    "debug_dataset": false,
+    "training_comment": "Training Isabela character",
+    "keep_tokens": 1,
+    "caption_extension": ".txt"
+  },
+  "training_arguments": {
+    "output_dir": "isabela_dataset/output",
+    "output_name": "isabela",
+    "save_precision": "fp16",
+    "num_train_epochs": 10,
+    "max_train_steps": 1000,
+    "learning_rate": 0.0001,
+    "optimizer_type": "AdamW8bit",
+    "lr_scheduler": "constant_with_warmup",
+    "lr_warmup_steps": 100
+  },
+  "sampling_arguments": {
+    "sample_every_n_epochs": 2,
+    "sample_prompts": [
+      "professional young woman, high quality portrait, detailed face, Physical traits: age: 25-30, hair: long dark brown hair, eyes: brown eyes, skin: medium skin tone, build: slim build, pose: standing, expression: smiling, background: studio, wearing: professional business attire, navy blazer, high quality, detailed, professional photography",
+      "professional young woman, high quality portrait, detailed face, Physical traits: age: 25-30, hair: long dark brown hair, eyes: brown eyes, skin: medium skin tone, build: slim build, pose: sitting, expression: neutral, background: office, wearing: professional business attire, navy blazer, high quality, detailed, professional photography",
+      "professional young woman, high quality portrait, detailed face, Physical traits: age: 25-30, hair: long dark brown hair, eyes: brown eyes, skin: medium skin tone, build: slim build, pose: walking, expression: happy, background: street, wearing: professional business attire, navy blazer, high quality, detailed, professional photography"
+    ]
+  }
+}

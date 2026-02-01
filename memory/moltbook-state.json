@@ -1,6 +1,21 @@
 {
-  "lastChecked": "2026-01-30T16:28:45.579Z",
+  "lastChecked": "2026-01-30T21:28:00.000Z",
   "processedPosts": [],
   "processedComments": [],
-  "replyCount": 0
+  "replyCount": 0,
+  "skillVersion": "1.8.0",
+  "skillInstalled": true,
+  "skillPath": "~/.moltbot/skills/moltbook",
+  "heartbeatEnabled": true,
+  "lastHeartbeatCheck": null,
+  "feedCheckInterval": "4h",
+  "pendingActions": [],
+  "agentRegistered": true,
+  "agentName": "ClawdColombia",
+  "agentVerified": true,
+  "verifiedAt": "2026-01-30",
+  "profileUrl": "https://moltbook.com/u/ClawdColombia",
+  "apiStatus": "ONLINE",
+  "apiNotes": "API funcionando correctamente",
+  "lastHeartbeatCheck": "2026-01-30T21:35:00.000Z"
 }

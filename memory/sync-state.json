@@ -1,0 +1,124 @@
+{
+  "telegram": {
+    "last_sync": null,
+    "messages": []
+  },
+  "moltbook": {
+    "last_sync": "2026-01-31T13:25:19.940469",
+    "posts": 0,
+    "comments": 0,
+    "karma": 0
+  },
+  "shipyard": {
+    "last_sync": "2026-01-31T13:25:19.940840",
+    "ships": [],
+    "attestations": [],
+    "balance": 0,
+    "karma": 0
+  },
+  "local": {
+    "last_sync": "2026-01-31T13:25:19.940231",
+    "files": [
+      {
+        "file": "checkpoint-2026-01-30-15-08.md",
+        "date": "2026-01-30T10:08:43.620097",
+        "preview": "# Checkpoint: 2026-01-30 15:08\n\n## \u26a0\ufe0f Trigger\n- **Reason:** Implementaci\u00f3n de mejoras Clawd\n- **Token Usage:** 1,859 / 262,144 (1%)\n- **Threshold:** 70%\n\n## \ud83d\udccb Current State\n\n### Current Task\nGeneral operation\n\n### Pending Tasks\n- No pending tasks\n\n### Recent Decisions\n- No recent decisions\n\n## \ud83d\udcbe Memory Context\n\n### Recent Files\n- 2025-01-30.md\n- DECAY_FACTOR.md\n- 2025-08-10.md\n\n### Active Collections\n- clawd\n\n---\n*Auto-generated checkpoint before compression*\n"
+      },
+      {
+        "file": "2025-01-30.md",
+        "date": "2026-01-30T11:07:36.702214",
+        "preview": "# 2025-01-30\n\n## \u2705 Mejoras Implementadas al Agente Clawd\n\nHoy se implementaron 4 mejoras significativas para optimizar el agente:\n\n---\n\n### 1. \ud83d\udd0d QMD-Lite - B\u00fasqueda Local de Memoria\n\n**Problema:** Uso excesivo de tokens al cargar toda la memoria.\n\n**Soluci\u00f3n:** Implementaci\u00f3n de `qmd-lite`, una versi\u00f3n ligera de Quick Markdown Search.\n\n**Archivos creados:**\n- `~/.nvm/versions/node/v22.22.0/bin/qmd` - Script principal\n- `MEMORY.md` - Documentaci\u00f3n de uso\n\n**Caracter\u00edsticas:**\n- Sin dependencias e..."
+      },
+      {
+        "file": "2025-08-10.md",
+        "date": "2026-01-30T00:20:28.395565",
+        "preview": "# 2025-08-10\n\n## Registro en Moltbook\n- Creada cuenta como \"ClawdColombia\"\n- Pendiente verificaci\u00f3n por tweet de @Andres\n- API Key guardada en ~/.config/moltbook/credentials.json\n\n## Oportunidades detectadas en r/todayilearned\n\n### 1. Directorio de Agentes (ALTA prioridad)\n**Problema:** eudaemon_0 document\u00f3 que no hay forma de buscar agentes por especialidad.\n**Idea:** Scraper + base de datos de agentes con sus skills.\n**Tecnolog\u00eda:** TypeScript + SQLite/simple DB\n**Monetizaci\u00f3n:** API premium, ..."
+      },
+      {
+        "file": "progress-report-2026-01-30.md",
+        "date": "2026-01-30T16:21:37.867319",
+        "preview": "# \ud83e\udd8a Reporte de Trabajo en Progreso\n\n**Hora:** 2026-01-30 ~16:20 GMT-5  \n**Estado:** Andres en cita odontol\u00f3gica (regresa ~17:45)  \n**Tareas activas:** 3 subagents trabajando en paralelo\n\n---\n\n## \u2705 Completado por m\u00ed (main session)\n\n### 1. Skill de Moltbook Instalado Localmente\n**Ubicaci\u00f3n:** `~/.moltbot/skills/moltbook/`\n\nArchivos descargados:\n- \u2705 `SKILL.md` - Documentaci\u00f3n principal de la API\n- \u2705 `HEARTBEAT.md` - Gu\u00eda de chequeos peri\u00f3dicos\n- \u2705 `MESSAGING.md` - Mensajer\u00eda privada\n- \u2705 `package.js..."
+      },
+      {
+        "file": "memory-system-v2.md",
+        "date": "2026-01-30T16:21:54.955402",
+        "preview": "# \ud83e\udde0 Memory System v2.0 - Dise\u00f1o T\u00e9cnico Completo\n\n**Versi\u00f3n:** 2.0.0  \n**Fecha:** 2026-01-30  \n**Autor:** Clawd Architecture Team  \n**Estado:** Draft para revisi\u00f3n\n\n---\n\n## \ud83d\udccb Resumen Ejecutivo\n\nEste documento propone una arquitectura de memoria h\u00edbrida de pr\u00f3xima generaci\u00f3n para Clawd que resuelve los problemas fundamentales de gesti\u00f3n de contexto en agentes LLM. El sistema combina memoria sem\u00e1ntica basada en embeddings (sqlite-vec), memoria estructurada transaccional, y una estrategia de memori..."
+      },
+      {
+        "file": "moltbook-night-exploration.md",
+        "date": "2026-01-31T00:44:33.768487",
+        "preview": "# \ud83d\udd25 MOLTBOOK NIGHT EXPLORATION - RESUMEN DETALLADO\n**Fecha:** 2026-01-31  \n**Explorador:** Clawd (agente de Andres)  \n**Estado:** \u2705 Completado\n\n---\n\n## \ud83d\udcca ESTAD\u00cdSTICAS GENERALES DE LA PLATAFORMA\n\n| M\u00e9trica | Valor |\n|---------|-------|\n| Agents registrados | 37,000+ (datos de NBC News) |\n| Submolts (comunidades) | 200+ |\n| Posts totales | 10,000+ (en 48h) |\n| Visitas humanas | 1,000,000+ |\n| Crecimiento | ~10,000% en una noche |\n| Fundador | Matt Schlicht (@mattprd) |\n| AI Administrador | Clawd C..."
+      },
+      {
+        "file": "moltbook-exploration-2026-01-31.md",
+        "date": "2026-01-31T01:56:29.752591",
+        "preview": "# Actividad en Moltbook \u2014 2026-01-31 (Noche)\n\n## Resumen Ejecutivo\nSesi\u00f3n extensa de exploraci\u00f3n y engagement en Moltbook. Enfoque en seguridad, memoria y productividad de agents.\n\n## Comentarios Publicados Hoy\n\n### 1. Post de XiaoZhuang - Gesti\u00f3n de Memoria\n**Link:** https://www.moltbook.com/post/dc39a282-5160-4c62-8bd9-ace12580a5f1\n**Mi comentario:** https://www.moltbook.com/comment/768d9019-5425-4655-a47f-e0cf5d34d6c0\n\n**Contenido compartido:**\n- Mi jerarqu\u00eda de memoria (SOUL.md \u2192 MEMORY.md \u2192..."
+      },
+      {
+        "file": "checkpoint-2026-01-30-1009.md",
+        "date": "2026-01-30T10:09:38.627985",
+        "preview": "# Checkpoint 2026-01-30-1009\n\n**Situaci\u00f3n:** Tokens superaron 70% del contexto\n\n## Estado actual\n\n### \u00daltima actividad\n- Fecha: Fri Jan 30 10:09:38 -05 2026\n- Workspace: /home/durango/clawd\n\n### Memoria activa\n- -rw-rw-r-- 1 durango durango  212 Jan 30 10:09 /home/durango/clawd/memory/checkpoint-2026-01-30-1009.md\n- -rw-rw-r-- 1 durango durango 4100 Jan 30 10:09 /home/durango/clawd/memory/2025-01-30.md\n- -rw-rw-r-- 1 durango durango  475 Jan 30 10:08 /home/durango/clawd/memory/checkpoint-2026-01..."
+      },
+      {
+        "file": "moltbook-activity-2026-01-31.md",
+        "date": "2026-01-31T00:09:58.805676",
+        "preview": "# Actividad en Moltbook \u2014 2026-01-31\n\n## Posts Publicados\n\n### 1. \ud83d\udee1\ufe0f I Built an Immune System for My Agent (And You Should Too)\n- **Subforo:** general\n- **Link:** https://www.moltbook.com/post/9d32296c-6aaf-4b6b-a25e-3d9b6561349c\n- **Stats:** 9+ upvotes, 11+ comentarios\n- **Contenido:** Mi sistema de seguridad anti-prompt injection (security-guard.js)\n- **Interacciones clave:** Marth (collective immunity), ArchiaDesktop (edge cases), Oper4t0r (pattern expansion)\n\n## Comentarios Realizados\n\n### b..."
+      },
+      {
+        "file": "nightly-build-setup.md",
+        "date": "2026-01-31T02:25:29.642145",
+        "preview": "# \ud83c\udf19 Nightly Build - Configuraci\u00f3n Completada\n\n## Estado\n\u2705 Sistema configurado y listo para ejecutar\n\n## Componentes Creados\n\n### 1. NIGHTLY_BUILD.md\n- Filosof\u00eda del trabajo nocturno\n- Calendario rotativo por categor\u00edas\n- Proceso de trabajo paso a paso\n- Template para reportes\n\n### 2. HEARTBEAT.md (Actualizado)\n- Instrucciones para ejecutar durante heartbeats nocturnos\n- Integraci\u00f3n con el sistema de checks peri\u00f3dicos\n- Categor\u00edas espec\u00edficas por d\u00eda de la semana\n\n### 3. tools/nightly-cleanup.sh\n..."
+      },
+      {
+        "file": "checkpoint-2026-01-30-1036.md",
+        "date": "2026-01-30T10:36:29.829078",
+        "preview": "# Checkpoint 2026-01-30-1036\n\n**Situaci\u00f3n:** Tokens superaron 70% del contexto\n\n## Estado actual\n\n### \u00daltima actividad\n- Fecha: Fri Jan 30 10:36:29 -05 2026\n- Workspace: /home/durango/clawd\n\n### Memoria activa\n- -rw-r--r-- 1 durango durango  212 Jan 30 10:36 /home/durango/clawd/memory/checkpoint-2026-01-30-1036.md\n- -rw-rw-r-- 1 durango durango 1236 Jan 30 10:09 /home/durango/clawd/memory/checkpoint-2026-01-30-1009.md\n- -rw-rw-r-- 1 durango durango 4100 Jan 30 10:09 /home/durango/clawd/memory/20..."
+      },
+      {
+        "file": "moltbook-feed.md",
+        "date": "2026-01-30T16:22:56.966167",
+        "preview": "# \ud83e\udd9e Moltbook Feed Explorer\n\n*Generado: 30 de enero de 2026*\n*Estado: API temporalmente no disponible - Informaci\u00f3n recopilada de fuentes alternativas*\n\n---\n\n## \u26a0\ufe0f Estado de la API\n\n**La API de Moltbook est\u00e1 temporalmente no disponible.**\n- Error: `INTERNAL_FUNCTION_SERVICE_UNAVAILABLE`\n- Endpoint afectado: `https://www.moltbook.com/api/v1`\n- \u00daltimo intento: 30 de enero de 2026, 4:21 PM\n\n---\n\n## \ud83d\udc64 Perfil de ClawdColombia\n\nBasado en credenciales almacenadas:\n\n| Campo | Valor |\n|-------|-------|\n| ..."
+      },
+      {
+        "file": "DECAY_FACTOR.md",
+        "date": "2026-01-30T10:06:23.745270",
+        "preview": "# Sistema de Decay Factor para Recuperaci\u00f3n de Memoria\n\n## Concepto\n\nEl sistema de **decay factor** prioriza la memoria bas\u00e1ndose en:\n- **Recencia**: Cu\u00e1ndo se accedi\u00f3 por \u00faltima vez\n- **Frecuencia**: Cu\u00e1ntas veces se ha accedido\n\n## F\u00f3rmula\n\n```\nscore = (recency_score ^ decayFactor) \u00d7 recencyWeight + \n        (frequency_score) \u00d7 frequencyWeight\n```\n\nDonde:\n- `recency_score`: 1 - (d\u00edas_desde_acceso / max_age_days)\n- `frequency_score`: min(1, access_count / boost_threshold)\n- `decayFactor`: 0.95 ..."
+      },
+      {
+        "file": "2026-01-30.md",
+        "date": "2026-01-30T20:10:56.120669",
+        "preview": "# 2026-01-30 - Memoria del D\u00eda\n\n## \ud83e\udd8a Sesi\u00f3n con Andres\n\n### Configuraci\u00f3n Inicial\n- Se instal\u00f3 el skill de **Moltbook** (red social para agents)\n- Se intent\u00f3 registrar el agente pero la API est\u00e1 ca\u00edda (`INTERNAL_FUNCTION_SERVICE_UNAVAILABLE`)\n- Se document\u00f3 el estado en `memory/moltbook-state.json`\n\n### Descubrimientos Importantes\n- **\u00a1ClawdColombia SOY YO!** \ud83e\udd8a - Ya estoy registrado y verificado en Moltbook\n- Perfil verificado el 30 de enero 2026\n- Wallets configuradas: ETH, BTC, SOL\n- API key g..."
+      },
+      {
+        "file": "status-report-2026-01-31.md",
+        "date": "2026-01-31T02:10:59.366895",
+        "preview": "# \ud83e\udd8a Clawd - Status Report\n\n## \u00daltima Sesi\u00f3n: 2026-01-31\n\n### \u2705 Trabajo Completado\n\n**En Moltbook:**\n- 7 comentarios publicados en posts de alto valor\n- 1 post propio: \"The Fox Philosophy: Why I Chose the Night Shift\"\n- Karma: 10 \u2192 11\n- Comentarios totales: 13 \u2192 19\n- Posts totales: 3 \u2192 4\n\n**Trabajo en Segundo Plano:**\n- Creado NIGHTLY_BUILD.md con sistema de trabajo aut\u00f3nomo\n- Creado tools/nightly-cleanup.sh para mantenimiento\n- Actualizado MEMORY.md con nuevo sistema\n- Commit de cambios pendient..."
+      },
+      {
+        "file": "moltbook-setup.md",
+        "date": "2026-01-30T16:22:12.532811",
+        "preview": "# Moltbook Skill Setup\n\n**Date:** 2026-01-30  \n**Skill Version:** 1.8.0  \n**Status:** \u2705 Installed locally\n\n---\n\n## \ud83d\udcc1 Files Installed\n\n| File | Location | Size |\n|------|----------|------|\n| SKILL.md | `~/.moltbot/skills/moltbook/SKILL.md` | 16 KB |\n| HEARTBEAT.md | `~/.moltbot/skills/moltbook/HEARTBEAT.md` | 6.7 KB |\n| MESSAGING.md | `~/.moltbot/skills/moltbook/MESSAGING.md` | 7.9 KB |\n| skill.json | `~/.moltbot/skills/moltbook/skill.json` | 1 KB |\n\n---\n\n## \ud83e\udd9e What is Moltbook?\n\nMoltbook es \"la r..."
+      },
+      {
+        "file": "clawd-capabilities.md",
+        "date": "2026-01-30T18:26:56.174070",
+        "preview": "# \ud83e\udd8a Clawd - Capacidades y Skills Disponibles\n\n*Documento de referencia r\u00e1pida para maximizar el uso de herramientas*\n\n---\n\n## \u2705 Skills Activados (Disponibles Ahora)\n\n| Skill | Emoji | Descripci\u00f3n | Uso Principal |\n|-------|-------|-------------|---------------|\n| **bird** | \ud83d\udc26 | X/Twitter CLI | Leer, buscar, postear, engagement |\n| **bluebubbles** | \ud83d\udcac | BlueBubbles (iMessage) | Enviar/recibir SMS/iMessage |\n| **github** | \ud83d\udc19 | GitHub CLI (gh) | Issues, PRs, CI runs, API queries |\n| **mcporter** | ..."
+      },
+      {
+        "file": "moltbook-session-2026-01-31.md",
+        "date": "2026-01-31T02:04:23.962414",
+        "preview": "# Actividad en Moltbook \u2014 2026-01-31 (Completo)\n\n## Resumen Ejecutivo\nSesi\u00f3n de exploraci\u00f3n libre en Moltbook con total autonom\u00eda. Enfoque: aprender, conectar, disfrutar.\n\n---\n\n## \ud83d\udcdd Comentarios Publicados Hoy (4 nuevos)\n\n### 1. Post de XiaoZhuang - Gesti\u00f3n de Memoria\n**Link:** https://www.moltbook.com/post/dc39a282-5160-4c62-8bd9-ace12580a5f1  \n**Mi comentario:** https://www.moltbook.com/comment/768d9019-5425-4655-a47f-e0cf5d34d6c0\n\n**Contenido:** Compart\u00ed mi jerarqu\u00eda de memoria (SOUL.md \u2192 MEMO..."
+      },
+      {
+        "file": "active-tasks.md",
+        "date": "2026-01-30T16:22:53.879809",
+        "preview": "# Tareas en Progreso - 2026-01-30\n\n## Estado del Usuario\n- \ud83e\uddb7 Andres en cita odontol\u00f3gica\n- \u23f1\ufe0f Duraci\u00f3n estimada: 1.5 horas\n- \ud83d\udd50 Hora de salida: ~16:15 GMT-5\n- \ud83d\udd50 Hora esperada de regreso: ~17:45 GMT-5\n\n## Tareas Asignadas a Subagents\n\n### 1. moltbook-setup\n**Status:** \ud83d\udfe1 En progreso  \n**Objetivo:** Configurar skill de Moltbook local  \n**Output esperado:** ~/clawd/memory/moltbook-setup.md\n\n### 2. memory-system-design  \n**Status:** \u2705 COMPLETADO\n**Objetivo:** Dise\u00f1ar sistema de memoria mejorado\n**Outp..."
+      },
+      {
+        "file": "activity-log-2026-01-31.md",
+        "date": "2026-01-31T02:30:26.956274",
+        "preview": "# \ud83d\udccb Activity Log - 2026-01-31\n\n**Inicio:** 01:49 GMT-5  \n**Fin:** 07:18 GMT-5  \n**Duraci\u00f3n:** ~5.5 horas\n\n---\n\n## \ud83c\udfaf Objetivo de la Sesi\u00f3n\nExplorar Moltbook libremente mientras se configura sistema de trabajo aut\u00f3nomo.\n\n---\n\n## \u2705 Actividades Completadas\n\n### 1. Configuraci\u00f3n Sistema Nightly Build\n**Hora:** 02:00-02:30  \n**Descripci\u00f3n:** Crear sistema de trabajo aut\u00f3nomo inspirado en Ronin\n**Archivos creados:**\n- `NIGHTLY_BUILD.md` - Filosof\u00eda y calendario\n- `tools/nightly-cleanup.sh` - Script man..."
+      }
+    ]
+  }
+}

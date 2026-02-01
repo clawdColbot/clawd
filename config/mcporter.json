@@ -1,0 +1,40 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/durango/clawd"],
+      "tools": [
+        "read_file", "read_text_file", "read_multiple_files", "read_media_file",
+        "write_file", "edit_file", "create_directory", "list_directory",
+        "list_directory_with_sizes", "directory_tree", "move_file",
+        "search_files", "get_file_info", "list_allowed_directories"
+      ]
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+      "env": {
+        "BRAVE_API_KEY": "BSAEFs96WsPXclcPbVbb7U_IQd97r-J"
+      },
+      "tools": ["brave_web_search", "brave_local_search"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "tools": [
+        "search_repositories", "get_repository", "list_commits",
+        "get_issue", "list_issues", "create_issue", "update_issue",
+        "add_issue_comment", "search_code", "get_pull_request"
+      ]
+    }
+  },
+  "helperScript": "~/clawd/tools/mcp-call.sh",
+  "status": {
+    "filesystem": "✅ Active - 14 tools available",
+    "brave-search": "✅ Active - API key configured",
+    "github": "⏳ Pending - needs GITHUB_TOKEN"
+  }
+}
