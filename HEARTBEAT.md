@@ -20,10 +20,32 @@ If 6+ hours since last memory maintenance:
 4. Sincronizar con MEMORY.md (actualizar memoria de largo plazo)
 
 ## 📊 Health Check (cada 2 horas)
-1. Verificar estado de gateways: `clawdbot status`
-2. Revisar errores en logs: `clawdbot logs --errors`
-3. Verificar tokens usados vs disponibles
-4. Alertar si >80% tokens o errores críticos
+**Script:** `~/clawd/tools/health_check.sh`
+
+### Comando rápido:
+```bash
+~/clawd/tools/health_check.sh --quiet && echo "HEARTBEAT_OK" || echo "ALERT: Health check failed"
+```
+
+### Checks realizados:
+1. ✅ Clawdbot Gateway status
+2. ✅ Git repo integrity
+3. ✅ Memory system (TACIT.md, state.json, PARA)
+4. ✅ Tools availability
+5. ✅ Config files (.env, credentials)
+6. ✅ Logs y backups directories
+7. ⚠️ Token usage (alerta si >80%)
+
+### Output:
+- Consola: Human-readable status
+- JSON: `~/clawd/logs/health_report.json`
+- Log: `~/clawd/logs/health_check.log`
+
+### En caso de falla:
+1. Revisar `~/clawd/logs/health_report.json`
+2. Ejecutar `~/clawd/tools/recovery_check.sh`
+3. Si token usage >90%: checkpoint automático
+4. Reportar error específico (no solo "HEARTBEAT_OK")
 
 ## 🔧 Skills & Tools (cada 12 horas)
 1. Buscar nuevos skills en clawdhub.com
